@@ -235,10 +235,15 @@ def filterAuthorityRecords(data):
   it does deletes the matching authority records to avoid
   double checking
   """
-  for i, authority in enumerate(data['authority']):
+  i = 0
+  while i < len(data['authority']):
+    authority = data['authority'][i]
     for additional in data['additional']:
       if authority._nsdn.__str__() == additional._dn.__str__():
         del data['authority'][i]
+        i -= 1
+        break
+    i += 1
 
 
 def checkAuthorityRecords(id, question, data, seenCNAME):
