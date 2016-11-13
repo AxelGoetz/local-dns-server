@@ -276,7 +276,7 @@ def checkAdditionalRecords(id, question, data, seenCNAME):
 
     addr = inet_ntoa(additional._addr) # Convert from binary
     result = recursiveQuery(id, question, addr, seenCNAME)
-    if result is not None and result['rcode'] == Header.RCODE_NOERR:
+    if result is not None and 'rcode' in result and result['rcode'] == Header.RCODE_NOERR:
       if seenCNAME and len(result['authority']) == 0 and len(result['additional']) == 0:
         result['authority'] = filter((lambda x: x._type == RR.TYPE_NS), data['authority'])
         result['additional'] = filter((lambda x: x._type == RR.TYPE_A), data['additional'])
