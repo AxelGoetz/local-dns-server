@@ -1,0 +1,489 @@
+Question 1:
+ - Command: dig @199.19.56.1 www.xorp.org. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 39053
+     ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 2, ADDITIONAL: 2
+
+     ;; AUTHORITY SECTION:
+     xorp.org.  86400 IN NS ns2.xorp.org.
+     xorp.org.  86400 IN NS ns.xorp.org.
+
+     ;; ADDITIONAL SECTION:
+     ns.xorp.org.  86400 IN A 128.16.70.254
+     ns2.xorp.org.  86400 IN A 193.63.58.145
+
+ - Command: dig @128.16.70.254 www.xorp.org. +norecurse
+ - Output:
+     ;; connection timed out; no servers could be reached
+
+ - Command: dig @193.63.58.145 www.xorp.org. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 26124
+     ;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 2, ADDITIONAL: 2
+
+     ;; ANSWER SECTION:
+     www.xorp.org.		3600	IN	A	208.74.158.171
+
+
+Question 2:
+ newgate.cs.ucl.ac.uk. - Starting at root server l.root-servers.net with IP address 199.7.83.42
+
+ - Command: dig @199.7.83.42 newgate.cs.ucl.ac.uk. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 48306
+     ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 8, ADDITIONAL: 13
+
+     ;; AUTHORITY SECTION:
+     uk.			172800	IN	NS	nsa.nic.uk.
+     uk.			172800	IN	NS	nsb.nic.uk.
+     uk.			172800	IN	NS	nsc.nic.uk.
+     uk.			172800	IN	NS	nsd.nic.uk.
+     uk.			172800	IN	NS	dns1.nic.uk.
+     uk.			172800	IN	NS	dns2.nic.uk.
+     uk.			172800	IN	NS	dns3.nic.uk.
+     uk.			172800	IN	NS	dns4.nic.uk.
+
+     ;; ADDITIONAL SECTION:
+     nsa.nic.uk.		172800	IN	A	156.154.100.3
+     nsb.nic.uk.		172800	IN	A	156.154.101.3
+     nsc.nic.uk.		172800	IN	A	156.154.102.3
+     nsd.nic.uk.		172800	IN	A	156.154.103.3
+     dns1.nic.uk.		172800	IN	A	213.248.216.1
+     dns2.nic.uk.		172800	IN	A	103.49.80.1
+     dns3.nic.uk.		172800	IN	A	213.248.220.1
+     dns4.nic.uk.		172800	IN	A	43.230.48.1
+     nsa.nic.uk.		172800	IN	AAAA	2001:502:ad09::3
+     dns1.nic.uk.		172800	IN	AAAA	2a01:618:400::1
+     dns2.nic.uk.		172800	IN	AAAA	2401:fd80:400::1
+     dns3.nic.uk.		172800	IN	AAAA	2a01:618:404::1
+     dns4.nic.uk.		172800	IN	AAAA	2401:fd80:404::1
+
+ - Command: dig @156.154.100.3 newgate.cs.ucl.ac.uk. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 42810
+     ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 7, ADDITIONAL: 0
+
+     ;; AUTHORITY SECTION:
+     ac.uk.			172800	IN	NS	ns3.ja.net.
+     ac.uk.			172800	IN	NS	ws-fra1.win-ip.dfn.de.
+     ac.uk.			172800	IN	NS	ns0.ja.net.
+     ac.uk.			172800	IN	NS	ns4.ja.net.
+     ac.uk.			172800	IN	NS	ns2.ja.net.
+     ac.uk.			172800	IN	NS	auth03.ns.uu.net.
+     ac.uk.			172800	IN	NS	ns1.surfnet.nl.
+
+
+ - Command: dig @199.7.83.42 ns3.ja.net. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 63175
+     ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 13, ADDITIONAL: 14
+
+     ;; AUTHORITY SECTION:
+     net.			172800	IN	NS	a.gtld-servers.net.
+     net.			172800	IN	NS	b.gtld-servers.net.
+     net.			172800	IN	NS	c.gtld-servers.net.
+     net.			172800	IN	NS	d.gtld-servers.net.
+     net.			172800	IN	NS	e.gtld-servers.net.
+     net.			172800	IN	NS	f.gtld-servers.net.
+     net.			172800	IN	NS	g.gtld-servers.net.
+     net.			172800	IN	NS	h.gtld-servers.net.
+     net.			172800	IN	NS	i.gtld-servers.net.
+     net.			172800	IN	NS	j.gtld-servers.net.
+     net.			172800	IN	NS	k.gtld-servers.net.
+     net.			172800	IN	NS	l.gtld-servers.net.
+     net.			172800	IN	NS	m.gtld-servers.net.
+
+     ;; ADDITIONAL SECTION:
+     a.gtld-servers.net.	172800	IN	A	192.5.6.30
+     b.gtld-servers.net.	172800	IN	A	192.33.14.30
+     c.gtld-servers.net.	172800	IN	A	192.26.92.30
+     d.gtld-servers.net.	172800	IN	A	192.31.80.30
+     e.gtld-servers.net.	172800	IN	A	192.12.94.30
+     f.gtld-servers.net.	172800	IN	A	192.35.51.30
+     g.gtld-servers.net.	172800	IN	A	192.42.93.30
+     h.gtld-servers.net.	172800	IN	A	192.54.112.30
+     i.gtld-servers.net.	172800	IN	A	192.43.172.30
+     j.gtld-servers.net.	172800	IN	A	192.48.79.30
+     k.gtld-servers.net.	172800	IN	A	192.52.178.30
+     l.gtld-servers.net.	172800	IN	A	192.41.162.30
+     m.gtld-servers.net.	172800	IN	A	192.55.83.30
+     a.gtld-servers.net.	172800	IN	AAAA	2001:503:a83e::2:30
+
+ - Command: dig @192.5.6.30 ns3.ja.net. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 14031
+     ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 5, ADDITIONAL: 10
+
+     ;; AUTHORITY SECTION:
+     ja.net.			172800	IN	NS	ns0.ja.net.
+     ja.net.			172800	IN	NS	ns1.surfnet.nl.
+     ja.net.			172800	IN	NS	ns1.ja.net.
+     ja.net.			172800	IN	NS	ns2.ja.net.
+     ja.net.			172800	IN	NS	ns4.ja.net.
+
+     ;; ADDITIONAL SECTION:
+     ns0.ja.net.		172800	IN	A	128.86.1.20
+     ns0.ja.net.		172800	IN	A	193.63.94.20
+     ns0.ja.net.		172800	IN	AAAA	2001:630:0:8::14
+     ns0.ja.net.		172800	IN	AAAA	2001:630:0:9::14
+     ns1.ja.net.		172800	IN	A	194.81.227.226
+     ns1.ja.net.		172800	IN	AAAA	2001:630:0:44::e2
+     ns2.ja.net.		172800	IN	A	193.63.105.17
+     ns2.ja.net.		172800	IN	AAAA	2001:630:0:45::11
+     ns4.ja.net.		172800	IN	A	193.62.157.66
+     ns4.ja.net.		172800	IN	AAAA	2001:630:0:47::42
+
+ - Command: dig @128.86.1.20 ns3.ja.net. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 25309
+     ;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 5, ADDITIONAL: 12
+
+     ;; ANSWER SECTION:
+     ns3.ja.net.		86400	IN	A	193.63.106.103
+
+ - Command: dig @193.63.106.103 newgate.cs.ucl.ac.uk. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 49437
+     ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 4, ADDITIONAL: 5
+
+     ;; AUTHORITY SECTION:
+     ucl.ac.uk.		86400	IN	NS	bas-a.bcc.ac.uk.
+     ucl.ac.uk.		86400	IN	NS	link-1.ts.bcc.ac.uk.
+     ucl.ac.uk.		86400	IN	NS	ns1.cs.ucl.ac.uk.
+     ucl.ac.uk.		86400	IN	NS	ns2.ja.net.
+
+     ;; ADDITIONAL SECTION:
+     ns1.cs.ucl.ac.uk.	86400	IN	A	128.16.5.32
+     ns2.ja.net.		86400	IN	A	193.63.105.17
+     bas-a.bcc.ac.uk.	86400	IN	A	144.82.100.41
+     link-1.ts.bcc.ac.uk.	86400	IN	A	144.82.100.1
+     ns2.ja.net.		86400	IN	AAAA	2001:630:0:45::11
+
+ - Command: dig @128.16.5.32 newgate.cs.ucl.ac.uk. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 8333
+     ;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 3, ADDITIONAL: 1
+
+     ;; ANSWER SECTION:
+     newgate.cs.ucl.ac.uk.	86400	IN	A	128.16.9.83
+
+ www.microsoft.com. - Starting at root server l.root-servers.net with IP address 199.7.83.42
+
+ - Command: dig @199.7.83.42 www.microsoft.com. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 3744
+     ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 13, ADDITIONAL: 14
+
+     ;; AUTHORITY SECTION:
+     com.			172800	IN	NS	a.gtld-servers.net.
+     com.			172800	IN	NS	b.gtld-servers.net.
+     com.			172800	IN	NS	c.gtld-servers.net.
+     com.			172800	IN	NS	d.gtld-servers.net.
+     com.			172800	IN	NS	e.gtld-servers.net.
+     com.			172800	IN	NS	f.gtld-servers.net.
+     com.			172800	IN	NS	g.gtld-servers.net.
+     com.			172800	IN	NS	h.gtld-servers.net.
+     com.			172800	IN	NS	i.gtld-servers.net.
+     com.			172800	IN	NS	j.gtld-servers.net.
+     com.			172800	IN	NS	k.gtld-servers.net.
+     com.			172800	IN	NS	l.gtld-servers.net.
+     com.			172800	IN	NS	m.gtld-servers.net.
+
+     ;; ADDITIONAL SECTION:
+     a.gtld-servers.net.	172800	IN	A	192.5.6.30
+     a.gtld-servers.net.	172800	IN	AAAA	2001:503:a83e::2:30
+     b.gtld-servers.net.	172800	IN	A	192.33.14.30
+     b.gtld-servers.net.	172800	IN	AAAA	2001:503:231d::2:30
+     c.gtld-servers.net.	172800	IN	A	192.26.92.30
+     d.gtld-servers.net.	172800	IN	A	192.31.80.30
+     e.gtld-servers.net.	172800	IN	A	192.12.94.30
+     f.gtld-servers.net.	172800	IN	A	192.35.51.30
+     g.gtld-servers.net.	172800	IN	A	192.42.93.30
+     h.gtld-servers.net.	172800	IN	A	192.54.112.30
+     i.gtld-servers.net.	172800	IN	A	192.43.172.30
+     j.gtld-servers.net.	172800	IN	A	192.48.79.30
+     k.gtld-servers.net.	172800	IN	A	192.52.178.30
+     l.gtld-servers.net.	172800	IN	A	192.41.162.30
+
+ - Command: dig @192.5.6.30 www.microsoft.com. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 23595
+     ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 4, ADDITIONAL: 8
+
+     ;; AUTHORITY SECTION:
+     microsoft.com.		172800	IN	NS	ns3.msft.net.
+     microsoft.com.		172800	IN	NS	ns1.msft.net.
+     microsoft.com.		172800	IN	NS	ns2.msft.net.
+     microsoft.com.		172800	IN	NS	ns4.msft.net.
+
+     ;; ADDITIONAL SECTION:
+     ns3.msft.net.		172800	IN	A	193.221.113.53
+     ns3.msft.net.		172800	IN	AAAA	2620:0:34::53
+     ns1.msft.net.		172800	IN	A	208.84.0.53
+     ns1.msft.net.		172800	IN	AAAA	2620:0:30::53
+     ns2.msft.net.		172800	IN	A	208.84.2.53
+     ns2.msft.net.		172800	IN	AAAA	2620:0:32::53
+     ns4.msft.net.		172800	IN	A	208.76.45.53
+     ns4.msft.net.		172800	IN	AAAA	2620:0:37::53
+
+ - Command: dig @193.221.113.53 www.microsoft.com. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 50619
+     ;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+     ;; ANSWER SECTION:
+     www.microsoft.com.	3600	IN	CNAME	www.microsoft.com-c-2.edgekey.net
+
+ - Command: dig @199.7.83.42 www.microsoft.com-c-2.edgekey.net +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 24210
+     ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 13, ADDITIONAL: 14
+
+     ;; AUTHORITY SECTION:
+     net.			172800	IN	NS	a.gtld-servers.net.
+     net.			172800	IN	NS	b.gtld-servers.net.
+     net.			172800	IN	NS	c.gtld-servers.net.
+     net.			172800	IN	NS	d.gtld-servers.net.
+     net.			172800	IN	NS	e.gtld-servers.net.
+     net.			172800	IN	NS	f.gtld-servers.net.
+     net.			172800	IN	NS	g.gtld-servers.net.
+     net.			172800	IN	NS	h.gtld-servers.net.
+     net.			172800	IN	NS	i.gtld-servers.net.
+     net.			172800	IN	NS	j.gtld-servers.net.
+     net.			172800	IN	NS	k.gtld-servers.net.
+     net.			172800	IN	NS	l.gtld-servers.net.
+     net.			172800	IN	NS	m.gtld-servers.net.
+
+     ;; ADDITIONAL SECTION:
+     a.gtld-servers.net.	172800	IN	A	192.5.6.30
+     b.gtld-servers.net.	172800	IN	A	192.33.14.30
+     c.gtld-servers.net.	172800	IN	A	192.26.92.30
+     d.gtld-servers.net.	172800	IN	A	192.31.80.30
+     e.gtld-servers.net.	172800	IN	A	192.12.94.30
+     f.gtld-servers.net.	172800	IN	A	192.35.51.30
+     g.gtld-servers.net.	172800	IN	A	192.42.93.30
+     h.gtld-servers.net.	172800	IN	A	192.54.112.30
+     i.gtld-servers.net.	172800	IN	A	192.43.172.30
+     j.gtld-servers.net.	172800	IN	A	192.48.79.30
+     k.gtld-servers.net.	172800	IN	A	192.52.178.30
+     l.gtld-servers.net.	172800	IN	A	192.41.162.30
+     m.gtld-servers.net.	172800	IN	A	192.55.83.30
+     a.gtld-servers.net.	172800	IN	AAAA	2001:503:a83e::2:30
+
+ - Command: dig @192.5.6.30 www.microsoft.com-c-2.edgekey.net +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 56071
+     ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 13, ADDITIONAL: 10
+
+     ;; AUTHORITY SECTION:
+     edgekey.net.		172800	IN	NS	ns1-66.akam.net.
+     edgekey.net.		172800	IN	NS	usw6.akam.net.
+     edgekey.net.		172800	IN	NS	adns1.akam.net.
+     edgekey.net.		172800	IN	NS	ns4-66.akam.net.
+     edgekey.net.		172800	IN	NS	ns7-65.akam.net.
+     edgekey.net.		172800	IN	NS	ns5-66.akam.net.
+     edgekey.net.		172800	IN	NS	a6-65.akam.net.
+     edgekey.net.		172800	IN	NS	a5-65.akam.net.
+     edgekey.net.		172800	IN	NS	a16-65.akam.net.
+     edgekey.net.		172800	IN	NS	a18-65.akam.net.
+     edgekey.net.		172800	IN	NS	a28-65.akam.net.
+     edgekey.net.		172800	IN	NS	a13-65.akam.net.
+     edgekey.net.		172800	IN	NS	a26-65.akam.net.
+
+     ;; ADDITIONAL SECTION:
+     ns1-66.akam.net.	172800	IN	A	193.108.91.66
+     ns1-66.akam.net.	172800	IN	AAAA	2600:1401:2::42
+     usw6.akam.net.		172800	IN	A	23.61.199.64
+     adns1.akam.net.		172800	IN	A	96.7.50.66
+     ns4-66.akam.net.	172800	IN	A	84.53.139.66
+     ns7-65.akam.net.	172800	IN	A	96.7.49.65
+     ns5-66.akam.net.	172800	IN	A	184.85.248.66
+     a6-65.akam.net.		172800	IN	A	23.211.133.65
+     a6-65.akam.net.		172800	IN	AAAA	2600:1401:1::41
+     a5-65.akam.net.		172800	IN	A	95.100.168.65
+
+ - Command: dig @193.108.91.66 www.microsoft.com-c-2.edgekey.net +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 14751
+     ;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+     ;; ANSWER SECTION:
+     www.microsoft.com-c-2.edgekey.net. 21600 IN CNAME www.microsoft.com-c-2.edgekey.net.globalredir.akadns.net.
+
+ - Command: dig @199.7.83.42 www.microsoft.com-c-2.edgekey.net.globalredir.akadns.net. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 35741
+     ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 13, ADDITIONAL: 12
+
+     ;; AUTHORITY SECTION:
+     net.			172800	IN	NS	a.gtld-servers.net.
+     net.			172800	IN	NS	b.gtld-servers.net.
+     net.			172800	IN	NS	c.gtld-servers.net.
+     net.			172800	IN	NS	d.gtld-servers.net.
+     net.			172800	IN	NS	e.gtld-servers.net.
+     net.			172800	IN	NS	f.gtld-servers.net.
+     net.			172800	IN	NS	g.gtld-servers.net.
+     net.			172800	IN	NS	h.gtld-servers.net.
+     net.			172800	IN	NS	i.gtld-servers.net.
+     net.			172800	IN	NS	j.gtld-servers.net.
+     net.			172800	IN	NS	k.gtld-servers.net.
+     net.			172800	IN	NS	l.gtld-servers.net.
+     net.			172800	IN	NS	m.gtld-servers.net.
+
+     ;; ADDITIONAL SECTION:
+     a.gtld-servers.net.	172800	IN	A	192.5.6.30
+     a.gtld-servers.net.	172800	IN	AAAA	2001:503:a83e::2:30
+     b.gtld-servers.net.	172800	IN	A	192.33.14.30
+     b.gtld-servers.net.	172800	IN	AAAA	2001:503:231d::2:30
+     c.gtld-servers.net.	172800	IN	A	192.26.92.30
+     d.gtld-servers.net.	172800	IN	A	192.31.80.30
+     e.gtld-servers.net.	172800	IN	A	192.12.94.30
+     f.gtld-servers.net.	172800	IN	A	192.35.51.30
+     g.gtld-servers.net.	172800	IN	A	192.42.93.30
+     h.gtld-servers.net.	172800	IN	A	192.54.112.30
+     i.gtld-servers.net.	172800	IN	A	192.43.172.30
+     j.gtld-servers.net.	172800	IN	A	192.48.79.30
+
+ - Command: dig @192.5.6.30 www.microsoft.com-c-2.edgekey.net.globalredir.akadns.net. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 48791
+     ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 10, ADDITIONAL: 5
+
+     ;; AUTHORITY SECTION:
+     akadns.net.		172800	IN	NS	a3-129.akadns.net.
+     akadns.net.		172800	IN	NS	a7-131.akadns.net.
+     akadns.net.		172800	IN	NS	a11-129.akadns.net.
+     akadns.net.		172800	IN	NS	a1-128.akadns.net.
+     akadns.net.		172800	IN	NS	a9-128.akadns.net.
+     akadns.net.		172800	IN	NS	a5-130.akadns.org.
+     akadns.net.		172800	IN	NS	a13-130.akadns.org.
+     akadns.net.		172800	IN	NS	a4-131.akadns.org.
+     akadns.net.		172800	IN	NS	a10-128.akadns.org.
+     akadns.net.		172800	IN	NS	a28-129.akadns.org.
+
+     ;; ADDITIONAL SECTION:
+     a3-129.akadns.net.	172800	IN	A	96.7.49.129
+     a7-131.akadns.net.	172800	IN	A	23.61.199.131
+     a11-129.akadns.net.	172800	IN	A	84.53.139.129
+     a1-128.akadns.net.	172800	IN	A	193.108.88.128
+     a9-128.akadns.net.	172800	IN	A	184.85.248.128
+
+ - Command: dig @96.7.49.129 www.microsoft.com-c-2.edgekey.net.globalredir.akadns.net. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 20039
+     ;; flags: qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+     ;; ANSWER SECTION:
+     www.microsoft.com-c-2.edgekey.net.globalredir.akadns.net. 900 IN CNAME e2847.dspb.akamaiedge.net.
+
+ - Command: dig @199.7.83.42 e2847.dspb.akamaiedge.net. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 10133
+     ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 13, ADDITIONAL: 14
+
+     ;; AUTHORITY SECTION:
+     net.			172800	IN	NS	a.gtld-servers.net.
+     net.			172800	IN	NS	b.gtld-servers.net.
+     net.			172800	IN	NS	c.gtld-servers.net.
+     net.			172800	IN	NS	d.gtld-servers.net.
+     net.			172800	IN	NS	e.gtld-servers.net.
+     net.			172800	IN	NS	f.gtld-servers.net.
+     net.			172800	IN	NS	g.gtld-servers.net.
+     net.			172800	IN	NS	h.gtld-servers.net.
+     net.			172800	IN	NS	i.gtld-servers.net.
+     net.			172800	IN	NS	j.gtld-servers.net.
+     net.			172800	IN	NS	k.gtld-servers.net.
+     net.			172800	IN	NS	l.gtld-servers.net.
+     net.			172800	IN	NS	m.gtld-servers.net.
+
+     ;; ADDITIONAL SECTION:
+     a.gtld-servers.net.	172800	IN	A	192.5.6.30
+     b.gtld-servers.net.	172800	IN	A	192.33.14.30
+     c.gtld-servers.net.	172800	IN	A	192.26.92.30
+     d.gtld-servers.net.	172800	IN	A	192.31.80.30
+     e.gtld-servers.net.	172800	IN	A	192.12.94.30
+     f.gtld-servers.net.	172800	IN	A	192.35.51.30
+     g.gtld-servers.net.	172800	IN	A	192.42.93.30
+     h.gtld-servers.net.	172800	IN	A	192.54.112.30
+     i.gtld-servers.net.	172800	IN	A	192.43.172.30
+     j.gtld-servers.net.	172800	IN	A	192.48.79.30
+     k.gtld-servers.net.	172800	IN	A	192.52.178.30
+     l.gtld-servers.net.	172800	IN	A	192.41.162.30
+     m.gtld-servers.net.	172800	IN	A	192.55.83.30
+     a.gtld-servers.net.	172800	IN	AAAA	2001:503:a83e::2:30
+
+ - Command: dig @192.5.6.30 e2847.dspb.akamaiedge.net. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 32966
+     ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 13, ADDITIONAL: 11
+
+     ;; AUTHORITY SECTION:
+     akamaiedge.net.		172800	IN	NS	la1.akamaiedge.net.
+     akamaiedge.net.		172800	IN	NS	la6.akamaiedge.net.
+     akamaiedge.net.		172800	IN	NS	la7.akamaiedge.net.
+     akamaiedge.net.		172800	IN	NS	la3.akamaiedge.net.
+     akamaiedge.net.		172800	IN	NS	lar6.akamaiedge.net.
+     akamaiedge.net.		172800	IN	NS	lar2.akamaiedge.net.
+     akamaiedge.net.		172800	IN	NS	ns3-194.akamaiedge.net.
+     akamaiedge.net.		172800	IN	NS	ns2-194.akamaiedge.net.
+     akamaiedge.net.		172800	IN	NS	ns4-194.akamaiedge.net.
+     akamaiedge.net.		172800	IN	NS	ns6-194.akamaiedge.net.
+     akamaiedge.net.		172800	IN	NS	ns7-194.akamaiedge.net.
+     akamaiedge.net.		172800	IN	NS	ns5-194.akamaiedge.net.
+     akamaiedge.net.		172800	IN	NS	ns1-1.akamaiedge.net.
+
+     ;; ADDITIONAL SECTION:
+     la1.akamaiedge.net.	172800	IN	A	184.26.161.192
+     la6.akamaiedge.net.	172800	IN	A	96.7.50.192
+     la7.akamaiedge.net.	172800	IN	A	23.211.132.192
+     la3.akamaiedge.net.	172800	IN	A	95.101.36.192
+     lar6.akamaiedge.net.	172800	IN	A	95.100.174.192
+     lar2.akamaiedge.net.	172800	IN	A	2.16.40.192
+     ns3-194.akamaiedge.net.	172800	IN	A	23.61.199.194
+     ns3-194.akamaiedge.net.	172800	IN	AAAA	2600:1406:32::c2
+     ns2-194.akamaiedge.net.	172800	IN	A	2.22.230.194
+     ns4-194.akamaiedge.net.	172800	IN	AAAA	2600:1480:1::c2
+     ns4-194.akamaiedge.net.	172800	IN	A	84.53.139.194
+
+ - Command: dig @184.26.161.192 e2847.dspb.akamaiedge.net. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 58490
+     ;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 9, ADDITIONAL: 9
+
+     ;; AUTHORITY SECTION:
+     dspb.akamaiedge.net.	8000	IN	NS	n7dspb.akamaiedge.net.
+     dspb.akamaiedge.net.	6000	IN	NS	n1dspb.akamaiedge.net.
+     dspb.akamaiedge.net.	8000	IN	NS	n4dspb.akamaiedge.net.
+     dspb.akamaiedge.net.	6000	IN	NS	n6dspb.akamaiedge.net.
+     dspb.akamaiedge.net.	8000	IN	NS	n2dspb.akamaiedge.net.
+     dspb.akamaiedge.net.	4000	IN	NS	n0dspb.akamaiedge.net.
+     dspb.akamaiedge.net.	4000	IN	NS	a0dspb.akamaiedge.net.
+     dspb.akamaiedge.net.	4000	IN	NS	n5dspb.akamaiedge.net.
+     dspb.akamaiedge.net.	6000	IN	NS	n3dspb.akamaiedge.net.
+
+     ;; ADDITIONAL SECTION:
+     n5dspb.akamaiedge.net.	4000	IN	A	23.3.15.42
+     n7dspb.akamaiedge.net.	8000	IN	A	23.3.15.48
+     n1dspb.akamaiedge.net.	6000	IN	A	77.67.30.247
+     n4dspb.akamaiedge.net.	8000	IN	A	23.3.15.41
+     n0dspb.akamaiedge.net.	4000	IN	A	195.59.127.13
+     a0dspb.akamaiedge.net.	4000	IN	AAAA	2600:1480:e800::c0
+     n6dspb.akamaiedge.net.	6000	IN	A	23.3.15.47
+     n3dspb.akamaiedge.net.	6000	IN	A	23.3.15.40
+     n2dspb.akamaiedge.net.	8000	IN	A	88.221.81.192
+
+ - Command: dig @23.3.15.42 e2847.dspb.akamaiedge.net. +norecurse
+ - Output:
+     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 25830
+     ;; flags: qr aa; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+     ;; ANSWER SECTION:
+     e2847.dspb.akamaiedge.net. 20	IN	A	23.214.84.106
+
+Question 3:
+The difference is that for newgate.cs.ucl.ac.uk. one of the DNS servers did not contain the IP address of another DNS server (ns3.ja.net.).
+Therefore a DNS lookup had to go back to the root server to get the IP address of ns3.ja.net. to continue the search.
+
+Question 4:
+The difference for www.microsoft.com. is that they use CNAMEs. Thus when you perform a query for www.microsoft.com., you do not get an IP address but a CNAME, more specifically www.microsoft.com-c-2.edgekey.net.
+Next, you need to start at the root server with that CNAME. Then you 2 more CNAMEs and eventually you get the IP address.

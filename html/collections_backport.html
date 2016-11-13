@@ -1,0 +1,166 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module collections_backport</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>collections_backport</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Volumes/gz01-secure/gz01-git-boffin/f2010/courseworks/cw2/src/gz01/collections_backport.py">/Volumes/gz01-secure/gz01-git-boffin/f2010/courseworks/cw2/src/gz01/collections_backport.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;This&nbsp;file&nbsp;is&nbsp;a&nbsp;backport&nbsp;of&nbsp;the&nbsp;<a href="http://www.python.org/dev/peps/pep-0372/">PEP&nbsp;372</a>&nbsp;<a href="#OrderedDict">OrderedDict</a>&nbsp;class&nbsp;to&nbsp;be&nbsp;added<br>
+#&nbsp;to&nbsp;Python&nbsp;2.7&nbsp;and&nbsp;3.1.<br>
+#</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#dict">__builtin__.dict</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="collections_backport.html#OrderedDict">OrderedDict</a>(<a href="__builtin__.html#dict">__builtin__.dict</a>, <a href="_abcoll.html#MutableMapping">_abcoll.MutableMapping</a>)
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="_abcoll.html#MutableMapping">_abcoll.MutableMapping</a>(<a href="_abcoll.html#Mapping">_abcoll.Mapping</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="collections_backport.html#OrderedDict">OrderedDict</a>(<a href="__builtin__.html#dict">__builtin__.dict</a>, <a href="_abcoll.html#MutableMapping">_abcoll.MutableMapping</a>)
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="OrderedDict">class <strong>OrderedDict</strong></a>(<a href="__builtin__.html#dict">__builtin__.dict</a>, <a href="_abcoll.html#MutableMapping">_abcoll.MutableMapping</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="collections_backport.html#OrderedDict">OrderedDict</a></dd>
+<dd><a href="__builtin__.html#dict">__builtin__.dict</a></dd>
+<dd><a href="_abcoll.html#MutableMapping">_abcoll.MutableMapping</a></dd>
+<dd><a href="_abcoll.html#Mapping">_abcoll.Mapping</a></dd>
+<dd><a href="_abcoll.html#Sized">_abcoll.Sized</a></dd>
+<dd><a href="_abcoll.html#Iterable">_abcoll.Iterable</a></dd>
+<dd><a href="_abcoll.html#Container">_abcoll.Container</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="OrderedDict-__delitem__"><strong>__delitem__</strong></a>(self, key)</dt></dl>
+
+<dl><dt><a name="OrderedDict-__eq__"><strong>__eq__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="OrderedDict-__init__"><strong>__init__</strong></a>(self, *args, **kwds)</dt></dl>
+
+<dl><dt><a name="OrderedDict-__iter__"><strong>__iter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OrderedDict-__reduce__"><strong>__reduce__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OrderedDict-__reversed__"><strong>__reversed__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OrderedDict-__setitem__"><strong>__setitem__</strong></a>(self, key, value)</dt></dl>
+
+<dl><dt><a name="OrderedDict-clear"><strong>clear</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OrderedDict-copy"><strong>copy</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OrderedDict-dequeueitem"><strong>dequeueitem</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OrderedDict-items"><strong>items</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OrderedDict-keys"><strong>keys</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OrderedDict-pop"><strong>pop</strong></a>(self, key, default<font color="#909090">=&lt;object object&gt;</font>)</dt></dl>
+
+<dl><dt><a name="OrderedDict-popitem"><strong>popitem</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="OrderedDict-setdefault"><strong>setdefault</strong></a>(self, key, default<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="OrderedDict-update"><strong>update</strong></a>(self, other<font color="#909090">=()</font>, **kwds)</dt></dl>
+
+<dl><dt><a name="OrderedDict-values"><strong>values</strong></a>(self)</dt></dl>
+
+<hr>
+Class methods defined here:<br>
+<dl><dt><a name="OrderedDict-fromkeys"><strong>fromkeys</strong></a>(cls, iterable, value<font color="#909090">=None</font>)<font color="#909090"><font face="helvetica, arial"> from <a href="abc.html#ABCMeta">abc.ABCMeta</a></font></font></dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__abstractmethods__</strong> = frozenset([])</dl>
+
+<hr>
+Methods inherited from <a href="__builtin__.html#dict">__builtin__.dict</a>:<br>
+<dl><dt><a name="OrderedDict-__cmp__"><strong>__cmp__</strong></a>(...)</dt><dd><tt>x.<a href="#OrderedDict-__cmp__">__cmp__</a>(y)&nbsp;&lt;==&gt;&nbsp;cmp(x,y)</tt></dd></dl>
+
+<dl><dt><a name="OrderedDict-__contains__"><strong>__contains__</strong></a>(...)</dt><dd><tt>D.<a href="#OrderedDict-__contains__">__contains__</a>(k)&nbsp;-&gt;&nbsp;True&nbsp;if&nbsp;D&nbsp;has&nbsp;a&nbsp;key&nbsp;k,&nbsp;else&nbsp;False</tt></dd></dl>
+
+<dl><dt><a name="OrderedDict-__ge__"><strong>__ge__</strong></a>(...)</dt><dd><tt>x.<a href="#OrderedDict-__ge__">__ge__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;=y</tt></dd></dl>
+
+<dl><dt><a name="OrderedDict-__getattribute__"><strong>__getattribute__</strong></a>(...)</dt><dd><tt>x.<a href="#OrderedDict-__getattribute__">__getattribute__</a>('name')&nbsp;&lt;==&gt;&nbsp;x.name</tt></dd></dl>
+
+<dl><dt><a name="OrderedDict-__getitem__"><strong>__getitem__</strong></a>(...)</dt><dd><tt>x.<a href="#OrderedDict-__getitem__">__getitem__</a>(y)&nbsp;&lt;==&gt;&nbsp;x[y]</tt></dd></dl>
+
+<dl><dt><a name="OrderedDict-__gt__"><strong>__gt__</strong></a>(...)</dt><dd><tt>x.<a href="#OrderedDict-__gt__">__gt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&gt;y</tt></dd></dl>
+
+<dl><dt><a name="OrderedDict-__le__"><strong>__le__</strong></a>(...)</dt><dd><tt>x.<a href="#OrderedDict-__le__">__le__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;=y</tt></dd></dl>
+
+<dl><dt><a name="OrderedDict-__len__"><strong>__len__</strong></a>(...)</dt><dd><tt>x.<a href="#OrderedDict-__len__">__len__</a>()&nbsp;&lt;==&gt;&nbsp;len(x)</tt></dd></dl>
+
+<dl><dt><a name="OrderedDict-__lt__"><strong>__lt__</strong></a>(...)</dt><dd><tt>x.<a href="#OrderedDict-__lt__">__lt__</a>(y)&nbsp;&lt;==&gt;&nbsp;x&lt;y</tt></dd></dl>
+
+<dl><dt><a name="OrderedDict-__ne__"><strong>__ne__</strong></a>(...)</dt><dd><tt>x.<a href="#OrderedDict-__ne__">__ne__</a>(y)&nbsp;&lt;==&gt;&nbsp;x!=y</tt></dd></dl>
+
+<dl><dt><a name="OrderedDict-__repr__"><strong>__repr__</strong></a>(...)</dt><dd><tt>x.<a href="#OrderedDict-__repr__">__repr__</a>()&nbsp;&lt;==&gt;&nbsp;repr(x)</tt></dd></dl>
+
+<dl><dt><a name="OrderedDict-__sizeof__"><strong>__sizeof__</strong></a>(...)</dt><dd><tt>D.<a href="#OrderedDict-__sizeof__">__sizeof__</a>()&nbsp;-&gt;&nbsp;size&nbsp;of&nbsp;D&nbsp;in&nbsp;memory,&nbsp;in&nbsp;bytes</tt></dd></dl>
+
+<dl><dt><a name="OrderedDict-get"><strong>get</strong></a>(...)</dt><dd><tt>D.<a href="#OrderedDict-get">get</a>(k[,d])&nbsp;-&gt;&nbsp;D[k]&nbsp;if&nbsp;k&nbsp;in&nbsp;D,&nbsp;else&nbsp;d.&nbsp;&nbsp;d&nbsp;defaults&nbsp;to&nbsp;None.</tt></dd></dl>
+
+<dl><dt><a name="OrderedDict-has_key"><strong>has_key</strong></a>(...)</dt><dd><tt>D.<a href="#OrderedDict-has_key">has_key</a>(k)&nbsp;-&gt;&nbsp;True&nbsp;if&nbsp;D&nbsp;has&nbsp;a&nbsp;key&nbsp;k,&nbsp;else&nbsp;False</tt></dd></dl>
+
+<dl><dt><a name="OrderedDict-iteritems"><strong>iteritems</strong></a>(...)</dt><dd><tt>D.<a href="#OrderedDict-iteritems">iteritems</a>()&nbsp;-&gt;&nbsp;an&nbsp;iterator&nbsp;over&nbsp;the&nbsp;(key,&nbsp;value)&nbsp;items&nbsp;of&nbsp;D</tt></dd></dl>
+
+<dl><dt><a name="OrderedDict-iterkeys"><strong>iterkeys</strong></a>(...)</dt><dd><tt>D.<a href="#OrderedDict-iterkeys">iterkeys</a>()&nbsp;-&gt;&nbsp;an&nbsp;iterator&nbsp;over&nbsp;the&nbsp;keys&nbsp;of&nbsp;D</tt></dd></dl>
+
+<dl><dt><a name="OrderedDict-itervalues"><strong>itervalues</strong></a>(...)</dt><dd><tt>D.<a href="#OrderedDict-itervalues">itervalues</a>()&nbsp;-&gt;&nbsp;an&nbsp;iterator&nbsp;over&nbsp;the&nbsp;values&nbsp;of&nbsp;D</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="__builtin__.html#dict">__builtin__.dict</a>:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+<dl><dt><strong>__new__</strong> = &lt;built-in method __new__ of type object&gt;<dd><tt>T.<a href="#OrderedDict-__new__">__new__</a>(S,&nbsp;...)&nbsp;-&gt;&nbsp;a&nbsp;new&nbsp;object&nbsp;with&nbsp;type&nbsp;S,&nbsp;a&nbsp;subtype&nbsp;of&nbsp;T</tt></dl>
+
+<hr>
+Class methods inherited from <a href="_abcoll.html#Sized">_abcoll.Sized</a>:<br>
+<dl><dt><a name="OrderedDict-__subclasshook__"><strong>__subclasshook__</strong></a>(cls, C)<font color="#909090"><font face="helvetica, arial"> from <a href="abc.html#ABCMeta">abc.ABCMeta</a></font></font></dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="_abcoll.html#Sized">_abcoll.Sized</a>:<br>
+<dl><dt><strong>__metaclass__</strong> = &lt;class 'abc.ABCMeta'&gt;<dd><tt>Metaclass&nbsp;for&nbsp;defining&nbsp;Abstract&nbsp;Base&nbsp;Classes&nbsp;(ABCs).<br>
+&nbsp;<br>
+Use&nbsp;this&nbsp;metaclass&nbsp;to&nbsp;create&nbsp;an&nbsp;ABC.&nbsp;&nbsp;An&nbsp;ABC&nbsp;can&nbsp;be&nbsp;subclassed<br>
+directly,&nbsp;and&nbsp;then&nbsp;acts&nbsp;as&nbsp;a&nbsp;mix-in&nbsp;class.&nbsp;&nbsp;You&nbsp;can&nbsp;also&nbsp;register<br>
+unrelated&nbsp;concrete&nbsp;classes&nbsp;(even&nbsp;built-in&nbsp;classes)&nbsp;and&nbsp;unrelated<br>
+ABCs&nbsp;as&nbsp;'virtual&nbsp;subclasses'&nbsp;--&nbsp;these&nbsp;and&nbsp;their&nbsp;descendants&nbsp;will<br>
+be&nbsp;considered&nbsp;subclasses&nbsp;of&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;by&nbsp;the&nbsp;built-in<br>
+issubclass()&nbsp;function,&nbsp;but&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;won't&nbsp;show&nbsp;up&nbsp;in<br>
+their&nbsp;MRO&nbsp;(Method&nbsp;Resolution&nbsp;Order)&nbsp;nor&nbsp;will&nbsp;method<br>
+implementations&nbsp;defined&nbsp;by&nbsp;the&nbsp;registering&nbsp;ABC&nbsp;be&nbsp;callable&nbsp;(not<br>
+even&nbsp;via&nbsp;super()).</tt></dl>
+
+</td></tr></table></td></tr></table>
+</body></html>
