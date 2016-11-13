@@ -256,7 +256,7 @@ def checkAuthorityRecords(id, question, data, seenCNAME):
       continue
     newQuestion = QE(dn=authority._nsdn)
     result = recursiveQuery(id, newQuestion, ROOTNS_IN_ADDR, seenCNAME)
-    if result['rcode'] == Header.RCODE_NOERR:
+    if 'rcode' in result and result['rcode'] == Header.RCODE_NOERR:
       result1 = recursiveQuery(id, question, inet_ntoa(result['answer']._addr), seenCNAME)
       if result1['rcode'] == Header.RCODE_NOERR:
         return result1
@@ -432,7 +432,7 @@ while 1:
     reply = None
     DNSPacket = parseDNSPacket(data)
     result = findResult(DNSPacket['header']._id, DNSPacket['question'])
-    if result is None:
+    if result is None or 'rcode' not in result:
         reply = createDNSErrorReply(DNSPacket['header']._id, DNSPacket['question'], Header.RCODE_SRVFAIL)
     elif result['rcode'] == Header.RCODE_NOERR:
       reply = createDNSReply(DNSPacket['header']._id, DNSPacket['question'], result)
